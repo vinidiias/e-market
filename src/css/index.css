@@ -1,0 +1,24 @@
+.navbar {
+    background-color: #D96704;
+}
+
+.navbar a, .navbar button {
+    color: white;
+}
+
+.navbar ul > li p {
+    color: black;
+}
+
+.navbar .bi {
+    transition: 0.5s;
+    color: white;
+}
+
+.navbar .bi:hover {
+    color: black;
+}
+
+.card img {
+    width: 200px;
+}
