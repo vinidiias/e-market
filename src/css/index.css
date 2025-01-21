@@ -11,12 +11,27 @@
 }
 
 .navbar .bi {
+    font-size: 1.5em;
     transition: 0.5s;
     color: white;
 }
 
 .navbar .bi:hover {
     color: black;
+}
+
+.dropdown p {
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    width: 4rem;
+}
+
+.card {
+    width: 18rem;
 }
 
 .card img {
