@@ -30,6 +30,24 @@
     width: 4rem;
 }
 
+.dropdown-item img {
+    width: 35px;
+    object-fit: contain;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item .item-body {
+    width: 68%;
+    justify-content: space-around;
+}
+
 .card {
     width: 18rem;
 }
