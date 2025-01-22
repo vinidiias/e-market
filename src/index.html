@@ -43,8 +43,15 @@
         <!-- products -->
         <section class="products container text-center mt-4" id="products">
             <h1>Products</h1>
-            <div class="container-fluid">
-
+            <div class="d-md-flex justify-content-md-start mb-5 gap-3">
+                <button class="btn btn-dark">Inserir produto</button>
+                <select aria-label="Category" class="form-select" id="select-filter">
+                    <option value="all" selected>All</option>
+                    <option value="drinks">Beer</option>
+                    <option value="milk">Milk</option>
+                    <option value="coffee">Coffee</option>
+                    <option value="meat">Meat</option>
+                </select>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4" id="products-list">
             </div>

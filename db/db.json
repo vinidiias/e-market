@@ -4,6 +4,28 @@
             "id": "1",
             "name": "Cerveja Premium Heineken Long Neck 330ml",
             "price": "1.50",
+            "category": "drinks",
+            "img_path": "https://acdn.mitiendanube.com/stores/001/887/990/products/cb35585580d78b4a56c8ebbb287d1c98-3e6fc8ecef8842cdf716928842523964-1024-1024.png"
+        },
+        {
+            "id": "1",
+            "name": "Milk",
+            "price": "1.50",
+            "category": "milk",
+            "img_path": "https://acdn.mitiendanube.com/stores/001/887/990/products/cb35585580d78b4a56c8ebbb287d1c98-3e6fc8ecef8842cdf716928842523964-1024-1024.png"
+        },
+        {
+            "id": "1",
+            "name": "Cerveja Premium Heineken Long Neck 330ml",
+            "price": "1.50",
+            "category": "drinks",
+            "img_path": "https://acdn.mitiendanube.com/stores/001/887/990/products/cb35585580d78b4a56c8ebbb287d1c98-3e6fc8ecef8842cdf716928842523964-1024-1024.png"
+        },
+        {
+            "id": "1",
+            "name": "Cerveja Premium Heineken Long Neck 330ml",
+            "price": "1.50",
+            "category": "drinks",
             "img_path": "https://acdn.mitiendanube.com/stores/001/887/990/products/cb35585580d78b4a56c8ebbb287d1c98-3e6fc8ecef8842cdf716928842523964-1024-1024.png"
         }
     ]
