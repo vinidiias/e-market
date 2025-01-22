@@ -22,7 +22,12 @@
                     <button class="btn btn-outline-light" type="submit">Search</button>
                 </form>
                 <div class="dropdown">
-                    <i class="bi bi-cart-fill dropdown-toggle me-5" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <i class="bi bi-cart-fill position-relative dropdown-toggle me-5"  data-bs-toggle="dropdown" aria-expanded="false">
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-dark">
+                            <span id="quant-total">0</span>
+                            <span class="visually-hidden">unread messages</span>
+                        </span>
+                    </i>
                     <ul class="dropdown-menu dropdown-menu-end" id="cart-items">
                         <li class="dropdown-item item ">
                             <p>P</p>
@@ -38,6 +43,9 @@
         <!-- products -->
         <section class="products container text-center mt-4" id="products">
             <h1>Products</h1>
+            <div class="container-fluid">
+
+            </div>
             <div class="row row-cols-1 row-cols-md-3 g-4" id="products-list">
             </div>
         </section>
@@ -47,3 +55,13 @@
 </body>
 
 </html>
+
+<!--
+<button type="button" class="btn position-relative dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-cart-fill"></i>
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-dark">
+                          <span id="quant-total">0</span>
+                          <span class="visually-hidden">unread messages</span>
+                        </span>
+                      </button>
+-->

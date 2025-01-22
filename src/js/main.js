@@ -82,12 +82,8 @@ const getProducts = () => {
 window.onload = () => getProducts()
 
 function addProductToCart(id, name, price, img) {
-    let li = document.createElement('li')
-    let image = document.createElement('img')
-    let priceProduct = document.createElement('p')
-    let quant = document.createElement('p')
-    let priceTotal = document.getElementById('price')
     let valuePriceTotal = document.getElementById('price-total')
+    let quanti_total = document.getElementById('quant-total')
 
     const childElements = Array.from(cart.children).filter(child => child.classList.contains('cart-item'));
 
@@ -101,26 +97,38 @@ function addProductToCart(id, name, price, img) {
       elementExist[0].children[2].innerHTML = `${newValue}`
 
     } else {
-      li.classList.add('dropdown-item', 'item', 'cart-item')
-
-      li.setAttribute("data-id", id)
-
-      image.classList.add('img-fluid')
-
-      quant.innerText = `1`
-
-      priceProduct.innerText = `$${price}`
-
-      image.setAttribute('src', img)
-
-      li.appendChild(image)
-      li.appendChild(priceProduct)
-      li.appendChild(quant)
-      
-      cart.insertBefore(li, priceTotal)
+      insertHTMLToCart(id, price, img)
     }
 
     let newvaluePriceTotal = Number(valuePriceTotal.innerText) + Number(price)
-
     valuePriceTotal.innerText = `${newvaluePriceTotal}`
+
+    let newQuantTotal = Number(quanti_total.innerText) + 1
+    quanti_total.innerText = `${newQuantTotal}`
+}
+
+function insertHTMLToCart(id, price, img) {
+    let li = document.createElement('li')
+    let image = document.createElement('img')
+    let priceProduct = document.createElement('p')
+    let quant = document.createElement('p')
+    let priceTotal = document.getElementById('price')
+
+    li.classList.add('dropdown-item', 'item', 'cart-item')
+
+    li.setAttribute("data-id", id)
+
+    image.classList.add('img-fluid')
+
+    quant.innerText = `1`
+
+    priceProduct.innerText = `$${price}`
+
+    image.setAttribute('src', img)
+
+    li.appendChild(image)
+    li.appendChild(priceProduct)
+    li.appendChild(quant)
+    
+    cart.insertBefore(li, priceTotal)
 }

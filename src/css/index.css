@@ -20,6 +20,10 @@
     color: black;
 }
 
+.dropdown .badge {
+    font-size: .5em;
+}
+
 .dropdown p {
     font-size: .9em;
     margin: 0;
