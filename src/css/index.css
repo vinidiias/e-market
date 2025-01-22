@@ -1,65 +1,11 @@
-.navbar {
-    background-color: #D96704;
-}
-
-.navbar a, .navbar button {
+.navbar-brand {
     color: white;
 }
 
-.navbar ul > li p {
-    color: black;
-}
-
-.navbar .bi {
-    font-size: 1.5em;
-    transition: 0.5s;
+.navbar-brand:hover {
     color: white;
 }
 
-.navbar .bi:hover {
-    color: black;
-}
-
-.dropdown .badge {
-    font-size: .5em;
-}
-
-.dropdown p {
-    font-size: .9em;
-    margin: 0;
-    padding: 0;
-}
-
-.dropdown-item {
-    width: 4rem;
-}
-
-.dropdown-item img {
-    width: 35px;
-    object-fit: contain;
-}
-
-.item {
-    width: 100%;
-    text-align: center;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-}
-
-.item .item-body {
-    width: 68%;
-    justify-content: space-around;
-}
-
-.card {
-    width: 18rem;
-}
-
-.card img {
-    width: 200px;
-}
-
-.form-select {
-    width: 10rem;
+.container {
+    height: 100vh;
 }

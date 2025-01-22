@@ -6,24 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./index.css">
     <script type="text/javascript" src="js/main.js" defer></script>
     <title>E-Market</title>
 </head>
 
 <body>
-    <div class="container-fluid px-0">
+    <div class="d-flex flex-column container-fluid px-0" style="height: 100%;">
         <!-- navbar -->
-        <nav class="navbar navbar-expand-lg p-4" id="navbar">
+        <nav class="navbar navbar-expand-lg p-4 bg-dark" id="navbar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">E-Market</a>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="search" aria-label="Search">
-                    <button class="btn btn-outline-light" type="submit">Search</button>
+                    <button class="btn btnCustom" type="submit">Search</button>
                 </form>
                 <div class="dropdown">
                     <i class="bi bi-cart-fill position-relative dropdown-toggle me-5"  data-bs-toggle="dropdown" aria-expanded="false">
-                        <span class="position-absolute top-0 translate-middle badge rounded-pill bg-dark">
+                        <span class="position-absolute top-0 translate-middle badge rounded-pill">
                             <span id="quant-total">0</span>
                             <span class="visually-hidden">unread messages</span>
                         </span>
@@ -41,13 +41,13 @@
             </div>
         </nav>
         <!-- products -->
-        <section class="products container text-center mt-4" id="products">
+        <section class="products container text-center mt-4 mb-4" id="products">
             <h1>Products</h1>
-            <div class="d-md-flex justify-content-md-start mb-5 gap-3">
-                <button class="btn btn-dark">Inserir produto</button>
+            <div class="d-flex justify-content-md-start mb-5 gap-3 container-prod">
+                <a class="btn btn-dark" href="pages/createProduct/index.html">Inserir produto</a>
                 <select aria-label="Category" class="form-select" id="select-filter">
                     <option value="all" selected>All</option>
-                    <option value="drinks">Beer</option>
+                    <option value="drink">Drink</option>
                     <option value="milk">Milk</option>
                     <option value="coffee">Coffee</option>
                     <option value="meat">Meat</option>
@@ -56,6 +56,10 @@
             <div class="row row-cols-1 row-cols-md-3 g-4" id="products-list">
             </div>
         </section>
+        <!-- footer -->
+        <footer class="w-100 text-center text-white bg-dark py-3 align-bottom">
+            © 2024 E-Market. Todos os direitos reservados.
+        </footer>
     </div>
     <script src="../node_modules/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

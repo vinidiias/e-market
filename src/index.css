@@ -1,0 +1,90 @@
+body {
+    height: 100vh;
+}
+
+.btnCustom {
+    background-color: rgb(82, 82, 82);
+}
+
+.btnCustom:hover {
+    background-color: #D96704;
+    color: white;
+}
+
+.navbar-brand:hover {
+    color: white;
+}
+
+.navbar a, .navbar button {
+    color: white;
+}
+
+.navbar ul > li p {
+    color: black;
+}
+
+.navbar .badge {
+    background-color: #D96704;
+}
+
+.navbar .dropdown .bi:hover {
+    color: #D96704;
+}
+
+.navbar .bi {
+    font-size: 1.5em;
+    transition: 0.5s;
+    color: white;
+}
+
+.navbar .bi:hover {
+    color: black;
+}
+
+.dropdown .badge {
+    font-size: .5em;
+}
+
+.dropdown p {
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-item {
+    width: 4rem;
+}
+
+.dropdown-item img {
+    width: 35px;
+    object-fit: contain;
+}
+
+.item {
+    width: 100%;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.item .item-body {
+    width: 68%;
+    justify-content: space-around;
+}
+
+.card {
+    width: 18rem;
+}
+
+.card img {
+    width: 200px;
+}
+
+.products {
+    flex: 1;
+}
+
+.form-select {
+    width: 10rem;
+}
