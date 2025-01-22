@@ -1,25 +1,11 @@
 {
   "products": [
     {
-      "id": "1",
-      "name": "Cerveja Premium Heineken Long Neck 330ml",
-      "price": "1.50",
-      "category": "drink",
-      "img_path": "https://acdn.mitiendanube.com/stores/001/887/990/products/cb35585580d78b4a56c8ebbb287d1c98-3e6fc8ecef8842cdf716928842523964-1024-1024.png"
-    },
-    {
-      "id": "2",
-      "name": "Leite Parmalat Integral 1L",
+      "id": "433",
+      "name": "Cerveja Lager Heineken Garrafa 330ml",
       "price": "1.5",
-      "category": "milk",
-      "img_path": "https://parmalat.com.br/app/uploads/2019/07/integral-parmlat-mid-e1726080339136.png"
-    },
-    {
-      "id": "2",
-      "name": "Leite Parmalat Integral 1L",
-      "price": "1.5",
-      "category": "milk",
-      "img_path": "https://parmalat.com.br/app/uploads/2019/07/integral-parmlat-mid-e1726080339136.png"
+      "category": "drinks",
+      "img_path": "https://phygital-files.mercafacil.com/catalogo/uploads/produto/cerveja_lager_premium_puro_malte_heineken_garrafa_330ml_e28f18e5-2aa3-4348-b9b5-610053320cfa.png"
     }
   ]
 }

@@ -44,13 +44,15 @@
         <section class="products container text-center mt-4 mb-4" id="products">
             <h1>Products</h1>
             <div class="d-flex justify-content-md-start mb-5 gap-3 container-prod">
-                <a class="btn btn-dark" href="pages/createProduct/index.html">Inserir produto</a>
+                <a class="btn btn-dark" href="pages/createProduct/index.html">Create Product</a>
+                <button class="btn btn-dark" id="remove-product-btn">Remove Product</button>
                 <select aria-label="Category" class="form-select" id="select-filter">
                     <option value="all" selected>All</option>
                     <option value="drink">Drink</option>
                     <option value="milk">Milk</option>
                     <option value="coffee">Coffee</option>
                     <option value="meat">Meat</option>
+                    <option value="sweet">Sweet</option>
                 </select>
             </div>
             <div class="row row-cols-1 row-cols-md-3 g-4" id="products-list">

@@ -5,11 +5,15 @@ const createProduct = (e) => {
     let price = document.getElementById('price').value
     let category = document.getElementById('category').value
 
-    if(validateInput) {
+    if(validateInput(name, price, category)) {
+        let id = `${Math.floor(Math.random() * (2000 - 1 + 1)) + 1}`
         fetch('http://localhost:3000/products', {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({
-                id: '2',
+                id,
                 name,
                 price,
                 category,

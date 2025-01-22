@@ -11,14 +11,13 @@ const ProductManager = (() => {
   }
 })()
 
-const getProducts = () => {
-
+const getProducts = async () => {
     fetch('http://localhost:3000/products', {
         method: 'GET'
     })
     .then((data) => data.json())
     .then((data) => {
-
+      console.log(data)
         ProductManager.setProducts(data)
 
         renderProducts(data)
@@ -41,14 +40,16 @@ function renderProducts(products) {
     let text = document.createElement("p");
     let price = document.createElement("h6");
     let button = document.createElement("button");
+    let removeButton = document.createElement("button");
   
     col.classList.add("col", "d-flex", "justify-content-center");
     card.classList.add("card", "align-items-center", "border-dark");
-    image.classList.add("card-img-top", "img-fluid");
+    image.classList.add("card-img-top");
     body.classList.add("card-body");
     text.classList.add("card-text");
     price.classList.add("card-subtitle", "mb-3", "text-muted");
-    button.classList.add("btn", "btn-dark");
+    button.classList.add("btn", "btn-dark", "me-3");
+    removeButton.classList.add("btn", "btn-danger", "d-none"); // Initially hidden
   
     image.setAttribute("src", product.img_path);
     image.setAttribute("alt", product.name);
@@ -64,11 +65,11 @@ function renderProducts(products) {
     button.setAttribute("data-img", product.img_path); // Caminho da imagem do produto
   
     let icon = document.createElement("i");
-    let textButton = document.createTextNode(" Comprar");
-  
+    let textButton = document.createTextNode(" Buy");
+
     icon.classList.add("bi", "bi-cart-plus");
+
     button.appendChild(icon);
-  
     button.appendChild(textButton);
   
     button.addEventListener("click", (event) => {
@@ -79,10 +80,18 @@ function renderProducts(products) {
   
       addProductToCart(productId, productName, productPrice, productImg);      
     });
+
+    removeButton.innerText = "Remove";
+    removeButton.setAttribute("data-id", product.id);
+    removeButton.addEventListener("click", (event) => {
+      const productId = event.target.getAttribute("data-id");
+      removeProduct(productId);
+    });
   
     body.appendChild(text);
     body.appendChild(price);
     body.appendChild(button);
+    body.appendChild(removeButton); // Add remove button to the card
   
     card.appendChild(image);
     card.appendChild(body);
@@ -92,6 +101,32 @@ function renderProducts(products) {
     products_list.appendChild(col);
   })
 }
+
+async function removeProduct(productId) {
+  const products_list = document.getElementById("products-list");
+  const productCard = Array.from(products_list.children).find(col => {
+    const button = col.querySelector('button[data-id="' + productId + '"]');
+    return button !== undefined;
+  });
+  
+  if (productCard) {
+    fetch(`http://localhost:3000/products/${productId}` ,{
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(() => products_list.removeChild(productCard))
+    .catch(error => console.error('Error:', error))
+  }
+}
+
+document.getElementById('remove-product-btn').addEventListener('click', () => {
+  const removeButtons = document.querySelectorAll('#products-list .btn-danger');
+  removeButtons.forEach(button => {
+    button.classList.toggle('d-none'); // Toggle visibility of remove buttons
+  });
+});
 
 // Função para filtrar produtos por categoria
 function filterProducts(category) {
