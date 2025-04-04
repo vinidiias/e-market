@@ -10,7 +10,6 @@ server.use(
     jsonServer.rewriter({
         "/*": "/$1",
     })
-
 )
 server.use(router)
 
